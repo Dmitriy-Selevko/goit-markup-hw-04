@@ -7,6 +7,7 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --tellandmail-color: rgba(255, 255, 255, 0.6);
+  --icons-color: #afb1b8;
 }
 
 body {
@@ -50,19 +51,6 @@ h4 {
   display: flex;
 }
 
-.logo-accent,
-.logo:focus,
-.menu-link:focus,
-.contacts-link:focus,
-.header-tellandmail:focus,
-.logo:hover,
-.menu-link:hover,
-.contacts-link:hover,
-.header-tellandmail:hover,
-.menu-link.current {
-  color: var(--accent-color);
-}
-
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -93,6 +81,12 @@ h4 {
   line-height: 1.2;
 }
 
+.logo-accent,
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
+}
+
 .menu-list {
   display: flex;
 }
@@ -113,6 +107,12 @@ h4 {
   color: var(--title-text-color);
 }
 
+.menu-link:hover,
+.menu-link:focus,
+.menu-link.current {
+  color: var(--accent-color);
+}
+
 .contacts-list {
   display: flex;
   align-items: center;
@@ -123,25 +123,30 @@ h4 {
   margin-right: 50px;
 }
 
-.contacts-link {
-  display: flex;
+.header-tellandmail {
+  color: var(--primary-text-color);
+  font-style: normal;
+
+  display: inline-flex;
   align-items: center;
+}
+
+.header-tellandmail:hover,
+.header-tellandmail:focus {
+  color: var(--accent-color);
+}
+
+.header-tellandmail:hover .icon-mail,
+.header-tellandmail:focus .icon-mail,
+.header-tellandmail:hover .icon-telephone,
+.header-tellandmail:focus .icon-telephone {
+  fill: var(--accent-color);
 }
 
 .icon-mail,
 .icon-telephone {
   fill: var(--primary-text-color);
-}
-
-.icon-mail:hover,
-.icon-telephone:hover {
-  fill: var(--accent-color);
-}
-
-.header-tellandmail {
-  color: var(--primary-text-color);
-  font-style: normal;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .hero {
@@ -249,7 +254,8 @@ h4 {
 }
 
 .whatwedo-title,
-.ourpeople-title {
+.ourpeople-title,
+.ourclients-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -308,6 +314,77 @@ h4 {
   text-align: center;
 
   margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icon-link:hover .social-icon,
+.social-icon-link:focus .social-icon {
+  fill: var(--primary-white-color);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icons-color);
+}
+
+.ourclients-section {
+  background-color: var(--primary-white-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.ourclients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.ourclients-container {
+  width: 170px;
+  height: 90px;
+
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.ourclients-container:hover,
+.ourclients-container:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.ourclients-container:hover .ourclients-icon,
+.ourclients-container:focus .ourclients-icon {
+  fill: var(--accent-color);
+}
+
+.ourclients-icon {
+  fill: var(--icons-color);
 }
 
 .portfolio {
@@ -348,6 +425,8 @@ h4 {
 .selector-button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-list {
@@ -371,6 +450,12 @@ h4 {
 .project-card {
   background-color: var(--primary-white-color);
   border: 1px solid #eeeeee;
+}
+
+.project-card:hover,
+.project-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-title {
@@ -431,4 +516,32 @@ h4 {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+}
+
+.footer-main {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-links {
+  margin-left: 80px;
+}
+
+.footer-links-title {
+  color: var(--primary-white-color);
+  margin-top: 72px;
+  margin-bottom: 20px;
+}
+
+.footer-links .social-icon-link:hover,
+.footer-links .social-icon-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-links .social-icon-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-links .social-icon {
+  fill: var(--primary-white-color);
 }
