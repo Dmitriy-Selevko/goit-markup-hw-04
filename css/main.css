@@ -53,9 +53,11 @@ h4 {
 .logo-accent,
 .logo:focus,
 .menu-link:focus,
+.contacts-link:focus,
 .header-tellandmail:focus,
 .logo:hover,
 .menu-link:hover,
+.contacts-link:hover,
 .header-tellandmail:hover,
 .menu-link.current {
   color: var(--accent-color);
@@ -121,9 +123,25 @@ h4 {
   margin-right: 50px;
 }
 
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.icon-mail,
+.icon-telephone {
+  fill: var(--primary-text-color);
+}
+
+.icon-mail:hover,
+.icon-telephone:hover {
+  fill: var(--accent-color);
+}
+
 .header-tellandmail {
   color: var(--primary-text-color);
   font-style: normal;
+  margin-left: 10px;
 }
 
 .hero {
@@ -199,32 +217,12 @@ h4 {
   margin-right: 30px;
 }
 
-.advantage-item::before {
-  content: "";
-  display: block;
+.advantage-icon-container {
   height: 120px;
-
   background: var(--secondary-background-color);
   border-radius: 4px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/icons/icon-antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/icons/icon-clock.svg);
-}
-
-.icon-comp::before {
-  background-image: url(../images/icons/icon-comp.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/icons/icon-astronaut.svg);
+  justify-content: center;
+  align-items: center;
 }
 
 .advantage-title {
